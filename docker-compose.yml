@@ -136,7 +136,7 @@ services:
       - "traefik.http.routers.phpmyadminmysite.middlewares=redirect-to-https@docker"
       # Get the routes from https
       - "traefik.http.routers.phpmyadminmysite-secured.rule=Host(`${PHPMYADMIN_DOMAIN}`)"
-      - "traefik.http.routers.phpmyadminmysite-secured.entrypoints=web-secure"
+      - "traefik.http.routers.phpmyadminmysite-secured.entrypoints=websecure"
       # Apply autentificiation with http challenge
       - "traefik.http.routers.phpmyadminmysite-secured.tls=true"
       - "traefik.http.routers.phpmyadminmysite-secured.tls.certresolver=myhttpchallenge"
