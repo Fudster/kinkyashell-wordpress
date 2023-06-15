@@ -96,4 +96,3 @@ services:
       - traefik.http.routers.phpmyadminmysite-secured.entrypoints=websecure
       - traefik.http.routers.phpmyadminmysite-secured.tls=true
       - traefik.http.routers.phpmyadminmysite-secured.tls.certresolver=myhttpchallenge
-      - traefik.docker.network=traefik
