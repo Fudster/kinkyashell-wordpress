@@ -52,7 +52,7 @@ services:
       - "traefik.http.routers.wordpressmysite.middlewares=redirect-to-https@docker"
       # Get the routes from https
       - "traefik.http.routers.wordpressmysite-secured.rule=Host(`${DOMAINE}`)"
-      - "traefik.http.routers.wordpressmysite-secured.entrypoints=web-secure"
+      - "traefik.http.routers.wordpressmysite-secured.entrypoints=websecure"
       # Apply autentificiation with http challenge
       - "traefik.http.routers.wordpressmysite-secured.tls=true"
       - "traefik.http.routers.wordpressmysite-secured.tls.certresolver=myhttpchallenge"
