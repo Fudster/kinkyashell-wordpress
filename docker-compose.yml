@@ -29,11 +29,11 @@ services:
     labels:
       - traefik.enable=true
       - traefik.docker.network=traefik
-      - traefik.http.routers.wordpressmysite.rule=Host(`${DOMAINE}`)
+      - traefik.http.routers.wordpressmysite.rule=Host(`${DOMAINE}`) || Host(`www.${DOMAINE}`)
       - traefik.http.routers.wordpressmysite.entrypoints=web
       - traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https
       - traefik.http.routers.wordpressmysite.middlewares=redirect-to-https@docker
-      - traefik.http.routers.wordpressmysite-secured.rule=Host(`${DOMAINE}`)
+      - traefik.http.routers.wordpressmysite-secured.rule=Host(`${DOMAINE}`) || Host(`www.${DOMAINE}`)
       - traefik.http.routers.wordpressmysite-secured.entrypoints=websecure
       - traefik.http.routers.wordpressmysite-secured.tls=true
       - traefik.http.routers.wordpressmysite-secured.tls.certresolver=letsencrypt
