@@ -55,7 +55,7 @@ services:
       - "traefik.http.routers.wordpressmysite-secured.entrypoints=websecure"
       # Apply autentificiation with http challenge
       - "traefik.http.routers.wordpressmysite-secured.tls=true"
-      - "traefik.http.routers.wordpressmysite-secured.tls.certresolver=myhttpchallenge"
+      - "traefik.http.routers.wordpressmysite-secured.tls.certresolver=letsencrypt"
 
   # The MySQL database
   mysitedb:
