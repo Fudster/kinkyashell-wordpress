@@ -1,9 +1,5 @@
 version: "3.3"
 
-services:
-
-  version: '3'
-
 # This file is designed to work with Traefik.
 # It is a reverse proxy that is used on the server host several services.
 # If you need to dev locally, copy this file under a new name and adapt it.
