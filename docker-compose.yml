@@ -67,8 +67,6 @@ services:
       options:
         max-size: "10m"
         max-file: "3"
-    env_file:
-      - ./.env
     environment:
       # Connect WordPrerss to the database
       MYSQL_DATABASE: ${WORDPRESS_DB_NAME}
@@ -92,8 +90,6 @@ services:
       options:
         max-size: "10m"
         max-file: "3"
-    env_file:
-      - ./.env
     ports:
       - "6379:6379"
     networks:
@@ -118,8 +114,6 @@ services:
       options:
         max-size: "10m"
         max-file: "3"
-    env_file:
-      - ./.env
     environment:
       - PMA_ARBITRARY=1
       - PMA_HOST=db
