@@ -80,7 +80,7 @@ services:
         max-file: "3"
     environment:
       - PMA_ARBITRARY=1
-      - PMA_HOST=db
+      - PMA_HOST=mysitedb
       - PMA_PORT=3306
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
     volumes:
