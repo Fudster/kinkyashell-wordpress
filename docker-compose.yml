@@ -37,7 +37,8 @@ services:
       - traefik.http.routers.wordpressmysite-secured.entrypoints=websecure
       - traefik.http.routers.wordpressmysite-secured.tls=true
       - traefik.http.routers.wordpressmysite-secured.tls.certresolver=letsencrypt
-      - traefik.http.routers.wordpressmysite-secured.service=mysitewordpress
+      - traefik.http.services.wordpressmysite.loadbalancer.server.port=80"
+      - traefik.http.routers.wordpressmysite-secured.service=wordpressmysite
   mysitedb:
     image: mysql:5.7
     restart: always
